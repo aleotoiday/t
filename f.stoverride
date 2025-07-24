@@ -1,0 +1,20 @@
+name: LightRoom
+desc: Adobe LightRoom
+
+http:
+  mitm:
+    - "photos.adobe.io"
+    - "lightroom.adobe.com"
+    - "*.adobe.io"
+
+  script:
+    - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts
+      name: LightRoom
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  LightRoom:
+    url: https://raw.githubusercontent.com/aleotoidayy/nghluan/aleoo/lightroom.js
+    interval: 86400
