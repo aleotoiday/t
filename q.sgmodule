@@ -3,14 +3,11 @@ desc: Adobe LightRoom
 
 http:
   mitm:
-    - "photos.adobe.io"
-    - "abp-profile-service.adobe.io"
-    - "lcs-mobile-cops.adobe.io"
-    - "csdkapi-policy.adobe.com"
-    - "adobesearch-lr.adobe.io"
-    - "adobecorp.data.adobedc.net"
-    - "*.adobe.io"
-    - "*.data.adobedc.net"
+    - cc-api-data.adobe.io
+    - photos.adobe.io
+    - adobecorp.data.adobedc.net
+    - api3.branch.io
+    - cdn.branch.io
 
   script:
     - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts
