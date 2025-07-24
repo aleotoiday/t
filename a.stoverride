@@ -1,0 +1,18 @@
+name: Lightroom
+desc: Tired
+http:
+  mitm:
+    - photos.adobe.io
+
+  script:
+    - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts.*
+      name: LightRoomJ
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  LightRoomJ:
+    url: https://raw.githubusercontent.com/aleotoiday/t/main/j.js
+    interval: 86400
+    format: js
