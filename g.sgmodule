@@ -1,0 +1,8 @@
+#!name= k
+#!desc= l
+
+[MITM]
+hostname = %APPEND% photos.adobe.io, lightroom.adobe.com
+
+[Script]
+LightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1, max-size=0,script-path=https://raw.githubusercontent.com/aleotoiday/t/main/c.js,script-update-interval=-1
