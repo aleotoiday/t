@@ -3,6 +3,7 @@ desc: Adobe LightRoom
 
 http:
   mitm:
+    - photos.adobe.io
     - lightroom.adobe.com
 
   script:
