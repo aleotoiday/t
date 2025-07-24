@@ -1,0 +1,26 @@
+name: LightRoom
+desc: Adobe LightRoom
+
+http:
+  mitm:
+    - "photos.adobe.io"
+    - "abp-profile-service.adobe.io"
+    - "lcs-mobile-cops.adobe.io"
+    - "csdkapi-policy.adobe.com"
+    - "adobesearch-lr.adobe.io"
+    - "adobecorp.data.adobedc.net"
+    - "*.adobe.io"
+    - "*.data.adobedc.net"
+
+  script:
+    - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts
+      name: LightRoom
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  LightRoom:
+    url: https://raw.githubusercontent.com/aleotoiday/t/main/q.js
+    interval: 86400
+    format: js
