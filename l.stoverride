@@ -1,0 +1,19 @@
+
+name: LightRoomTest
+desc: Test Adobe entitlement 
+http:
+  mitm:
+    - photos.adobe.io
+
+  script:
+    - match: ^https:\/\/photos\.adobe\.io\/v2\/accounts.*
+      name: LightRoomTest
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  LightRoomTest:
+    url: https://raw.githubusercontent.com/aleotoiday/t/main/l.js
+    interval: 86400
+    format: js
