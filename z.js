@@ -5,7 +5,7 @@ obj.current_subs={
       "product_id": "lightroom",
       "store": "adobe",
       "purchase_date": "2025-07-01T16:32:10.254954Z",
-      "expires_date": "2099-01-01T06:30:35Z"
+      "expires_date": "2099-01-01T06:30:35Z",
       "sao": {
         "inpkg_CCES": "0",
         "inpkg_CCLE": "1",
